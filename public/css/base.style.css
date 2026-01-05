@@ -1,63 +1,125 @@
-
-body{
-    background-color: rgb(183, 182, 182);
-    margin:0;
-    display: block;
+/* Reset et base */
+* {
+    box-sizing: border-box;
 }
 
-
-nav {
-    list-style-type: none;
+body {
+    background-color: rgb(183, 182, 182);
     margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Nav fixe */
+nav {
+    background-color: #333;
+    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    backdrop-filter: blur(6px);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    height: 60px; /* hauteur nav */
+}
+
+/* Contenu passe sous nav */
+main.content {
+    flex: 1;
+    background-color: white;
+    padding-top: 60px; /* même hauteur que la nav */
+}
+
+/* Responsive nav mobile */
+@media (max-width: 768px) {
+    nav {
+        position: relative;
+        height: auto;
+    }
+
+    main.content {
+        padding-top: 0;
+    }
 }
 
 
+nav ul {
+    display: flex;
+    flex-wrap: wrap; /* permet aux items de passer à la ligne sur petit écran */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 nav li {
-  float: left;
+    flex: 1; /* chaque item prend un espace égal */
+    text-align: center;
 }
 
 nav li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 14px;
 }
 
 nav li a:hover {
-  background-color: #089DDB;
+    background-color: #089DDB;
 }
 
-main{
-    background-color: white;
-    max-width: 100vw;
-    min-height: 100vh;
+/* Section principale */
+.sec {
+    padding: 8vh 5vw;
 }
 
-img{
-  border-radius: 90%;
+/* Images rondes */
+img {
+    border-radius: 50%;
+    max-width: 100%;
+    height: auto;
 }
 
-.sec{
-  padding: 10vh 10vw 10vh;
-
-}
+/* Footer */
 footer {
-    padding: 5px 0;
+    padding: 10px 0;
     text-align: center;
-    font-size: 14px ;
-    background-color: #333333;
+    font-size: 14px;
     font-weight: bold;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    color: white; 
+    background-color: #333333;
+    color: white;
+}
+
+/* Responsive : mobiles et tablettes */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* menu vertical sur petit écran */
+    }
+
+    nav li {
+        flex: none;
+        width: 100%;
+    }
+
+    .sec {
+        padding: 5vh 5vw;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    p, li {
+        font-size: 14px;
+    }
 }

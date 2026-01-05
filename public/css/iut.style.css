@@ -17,3 +17,13 @@
 .sec{
     padding: 10vh 0 0 0;
 }
+
+/* Responsive mobiles */
+@media (max-width: 768px) {
+
+    .sec{
+    padding: 0;
+}
+
+
+}

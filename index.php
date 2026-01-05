@@ -4,7 +4,7 @@ define("URL",str_replace("index.php","","http"."://$_SERVER[HTTP_HOST]$_SERVER[P
 
 // si lutilisateur est nulle part dans url page accueil
 if(empty($_GET["page"])){
-    header("Location:".URL."accueil");
+    header("Location:".URL."geii");
 }
 else{
     $url=explode("/",filter_var($_GET["page"],FILTER_SANITIZE_URL));
