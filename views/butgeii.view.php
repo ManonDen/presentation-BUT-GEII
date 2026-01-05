@@ -1,7 +1,6 @@
 <?php ob_start();
 ?>
-    <section>
-        
+ 
 <h1>Le BUT GEII à CALAIS concrètement comment ça se passe - El HABIB et DIALLO</h1>
 
 <p>
@@ -69,8 +68,6 @@ Le BUT GEII peut être suivi en alternance, mais seulement dans les IUT qui prop
 <p>
 L’organisation du temps est adaptée : le volume horaire à l’IUT est réduit d’environ 15 % en première année, 25 % en deuxième année et 20 % en troisième année, permettant à l’étudiant de consacrer une part importante de son temps à l’expérience professionnelle et à l’acquisition de compétences directement applicables en entreprise.
 </p>
-
-    </section>
 
    
 <?php

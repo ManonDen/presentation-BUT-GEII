@@ -16,6 +16,9 @@ else{
         case "geii":
             require "views/butgeii.view.php";
             break;
+        case "iut":
+            require "views/iut.view.php";
+            break;
             
     }
 }
