@@ -7,18 +7,22 @@
     <link rel="stylesheet" href="public/css/base.style.css">
     <link rel="stylesheet" href=<?="public/css/".$style.".style.css"?>>
 </head>
-<body>
     <nav >
-        <li><a href="accueil">HOME</a></li>
+        <li><a href="accueil"><img src="public/images/logo.png" alt="logo iut"></a></li>
         <li><a href="geii">BUT GEII</a></li>
         <li><a href="#contact">ASSOCIATIONS</a></li>
         <li><a href="#about">INFORMATIONS ULCO</a></li>
         <li><a href="#about">REGLEMENT INTERIEUR</a></li>
     </nav>
+<body>
+
     <main class="content">
         <section class="sec">
           <?= $content ?>
         </section>
     </main>
 </body>
+    <footer>
+        <p>© Copyright Manon Denolf</p>
+    </footer>
 </html>
