@@ -19,6 +19,9 @@ else{
         case "iut":
             require "views/iut.view.php";
             break;
+        case "associations":
+            require "views/asso.view.php";
+            break;
             
     }
 }

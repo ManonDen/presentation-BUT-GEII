@@ -13,6 +13,8 @@
         <ul>
             <li><a href="geii">BUT GEII</a></li>
             <li><a href="iut">BATIMENT IUT</a></li>
+            <li><a href="associations">ASSOCIATIONS</a></li>
+            <li><a href="public/pdf/reglement.pdf" target="_blank">REGLEMENT INTERIEUR BUT</a> </li>
         </ul>
     </nav>
 

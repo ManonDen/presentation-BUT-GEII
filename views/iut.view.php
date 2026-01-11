@@ -1,6 +1,6 @@
 <?php ob_start(); ?>
 <div class="video-container">
-    <video autoplay muted loop id="bg-video">
+    <video autoplay controls muted loop id="bg-video">
         <source src="public/videos/batiment_iut.mp4" type="video/mp4">
         Votre navigateur ne supporte pas la lecture de vidéo.
     </video>
