@@ -4,7 +4,7 @@ define("URL",str_replace("index.php","","http"."://$_SERVER[HTTP_HOST]$_SERVER[P
 
 // si lutilisateur est nulle part dans url page accueil
 if(empty($_GET["page"])){
-    header("Location:".URL."geii");
+    header("Location:".URL."accueil");
 }
 else{
     $url=explode("/",filter_var($_GET["page"],FILTER_SANITIZE_URL));
@@ -22,6 +22,13 @@ else{
         case "associations":
             require "views/asso.view.php";
             break;
-            
+        case "sae-alternance":
+            require "views/sae-alternance.view.php";
+            break;
+        default:
+            header("Location:".URL."accueil");
+            break;
     }
+    
+
 }

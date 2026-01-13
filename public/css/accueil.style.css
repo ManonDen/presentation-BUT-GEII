@@ -1,0 +1,154 @@
+.carousel.hero {
+    margin-top: -60px;
+}
+
+/* ===== CAROUSEL ===== */
+.carousel img {
+    border-radius: 0 !important;
+}
+
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+}
+/* ===== TEXTE CAROUSEL ===== */
+.carousel-caption {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    z-index: 5;
+    pointer-events: none; /* évite de bloquer les boutons */
+}
+
+.carousel-caption h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.carousel-caption p {
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    opacity: 0.9;
+}
+
+.carousel-caption h1,
+.carousel-caption p {
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+
+/* Container des slides */
+.carousel-inner {
+    display: flex;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Slide */
+.carousel-item {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay sombre (style Gravelines) */
+.carousel-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+}
+
+/* ===== BOUTONS ===== */
+
+.carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(6px);
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    padding: 0;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 10;
+    transition: 
+        background 0.3s ease,
+        transform 0.2s ease;
+}
+
+
+.carousel button:hover {
+    background: rgba(0, 0, 0, 0.7);
+    transform: scale(1.08);
+}
+
+.carousel .prev {
+    left: 20px;
+}
+
+.carousel .next {
+    right: 20px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+    .carousel {
+        height: 50vh;
+    }
+
+    .carousel button {
+        font-size: 24px;
+        padding: 8px 12px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .carousel {
+        height: 60vh;
+    }
+}
+
+
+
+/* Conteneur plein écran */
+.video-container {
+    position: absolute;  /* absolute ou relative selon ton layout */
+    top: 50;
+    left: 0;
+    width: 100vw;
+    height: 100dvh;  /* vrai plein écran sur iPhone/iPad */
+    overflow: hidden;
+    background: black;
+}
+
+/* Vidéo qui remplit le conteneur */
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* clé pour remplir sans bandes */
+    object-position: center;
+    display: block; /* important pour éviter marges par défaut */
+}
+
+
+

@@ -5,18 +5,22 @@
 
 body {
     background-color: rgb(183, 182, 182);
-    margin: 0;
+        margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     font-family: Arial, sans-serif;
 }
 
+
+
+
 /* Nav fixe */
 nav {
     background-color: #333;
     width: 100%;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     z-index: 1000;
@@ -28,7 +32,11 @@ nav {
 main.content {
     flex: 1;
     background-color: white;
-    padding-top: 60px; /* même hauteur que la nav */
+    padding-top: 0; /* même hauteur que la nav */
+}
+
+main.content > .hero {
+    margin-top: -60px;
 }
 
 /* Responsive nav mobile */
@@ -68,10 +76,7 @@ nav li a:hover {
     background-color: #089DDB;
 }
 
-/* Section principale */
-.sec {
-    padding: 8vh 5vw;
-}
+
 
 /* Images rondes */
 img {
@@ -101,9 +106,6 @@ footer {
         width: 100%;
     }
 
-    .sec {
-        padding: 5vh 5vw;
-    }
 }
 
 @media (max-width: 480px) {
