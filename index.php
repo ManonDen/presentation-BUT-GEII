@@ -25,6 +25,9 @@ else{
         case "sae-alternance":
             require "views/sae-alternance.view.php";
             break;
+        case "chiffres":
+            require "views/chiffres.view.php";
+            break;
         default:
             header("Location:".URL."accueil");
             break;
